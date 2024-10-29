@@ -1,0 +1,10 @@
+const {Router, request} = require('express');
+const router = Router();
+const {getProds,getProdId,createProd,deleteProd,upadteProd} = require('../controllers/index.controller');
+router.get('/productos',getProds);
+router.get('/unproducto/:id',getProdId);
+router.post('/creaproducto',createProd);
+//router.delete('/borramio/:id',deleteUser);
+router.delete('/bproducto/:id',deleteProd);
+router.put('/actualizaproducto/:id',upadteProd);
+module.exports = router;
